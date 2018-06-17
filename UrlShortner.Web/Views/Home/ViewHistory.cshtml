@@ -1,0 +1,22 @@
+﻿@using UrlShortner.Data
+@model IEnumerable<Url>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1 well">
+        <table class="table table-bordered table-striped table-responsive">
+            <tr>
+                <th>Link</th>
+                <th>Shortened Link</th>
+                <th>Times Short Link Used</th>
+            </tr>
+            @foreach(var url in Model)
+            {
+                <tr>
+                    <td style="max-width: 33%">@url.RealUrl.Take(20).ToString()</td>
+                    <td><a href="@ViewBag.Url/@url.ShortUrl">@ViewBag.Url/@url.ShortUrl</a></td>
+                    <td>@url.TimesUsed</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+

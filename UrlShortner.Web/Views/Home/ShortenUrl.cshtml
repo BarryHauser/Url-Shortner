@@ -1,0 +1,21 @@
+﻿@model int
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4 text-center">
+        <h1>Shorten Url</h1>
+        <br />
+        <br />
+        <input type="hidden" id="user-id" value="@Model" />
+        <label>Put the url you want to shorten in the text box</label>
+        <input class="form-control" id="url" placeholder="Url" />
+        <br/>
+        <button class="btn btn-success btn-lg">Submit</button>
+        <br/>
+        <div class="new-url col-md-10 col-md-offset-1 text-center">
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/shorten-url.js"></script>
+    }
